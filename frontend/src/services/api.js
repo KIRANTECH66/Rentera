@@ -1,7 +1,9 @@
 // This file will centralize API calls.
 // In a larger app, this might be split into multiple files (e.g., authService.js, propertyService.js).
 
-const API_BASE_URL = 'http://localhost:3001/api';
+// Use a relative URL for API requests, which will be proxied by the dev server,
+// or an environment variable for production/Docker environments.
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || '/api';
 
 /**
  * Registers a new user.

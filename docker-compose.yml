@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "3001:3001"
+    environment:
+      NODE_ENV: production
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    # The frontend needs to know where the backend is.
+    # In the Nginx config, we can proxy requests, or we can configure
+    # the React app to hit the backend service directly.
+    # For simplicity here, we'll assume the Nginx proxy is set up
+    # to forward /api requests to the backend service.
+    # To make this work, we'd need to modify the nginx.conf to proxy_pass
+    # requests to http://backend:3001.
+    depends_on:
+      - backend
