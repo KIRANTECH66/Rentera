@@ -60,5 +60,11 @@
       "monthly": "month",
       "yearly": "year"
     }
+  },
+  "dashboard": {
+    "title": "Landlord Dashboard",
+    "loading": "Loading your dashboard...",
+    "error": "Failed to load dashboard data",
+    "welcome": "Welcome, {{email}}"
   }
 }

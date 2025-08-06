@@ -60,5 +60,11 @@
       "monthly": "mes",
       "yearly": "año"
     }
+  },
+  "dashboard": {
+    "title": "Panel de Propietario",
+    "loading": "Cargando su panel...",
+    "error": "No se pudieron cargar los datos del panel",
+    "welcome": "Bienvenido, {{email}}"
   }
 }
