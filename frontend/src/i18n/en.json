@@ -17,5 +17,19 @@
     "passwordLabel": "Password:",
     "submitButton": "Login",
     "submittingButton": "Logging in..."
+  },
+  "verification": {
+    "title": "Become a Verified Landlord",
+    "description": "To ensure the safety and trust of our community, we require landlords to complete a background check. This helps you stand out to renters.",
+    "check": {
+      "identity": "Identity Verification",
+      "criminal": "Criminal Record Check",
+      "watchlist": "Global Watchlist Check"
+    },
+    "consent": "By clicking below, you consent to a background check performed by our third-party partner.",
+    "button": {
+      "start": "Start Verification",
+      "loading": "Initiating..."
+    }
   }
 }

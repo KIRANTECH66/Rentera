@@ -36,6 +36,26 @@ form {
   flex-wrap: wrap;
 }
 
+.divider {
+  width: 80%;
+  margin: 2rem auto;
+  border: 1px solid #eee;
+}
+
+.verification-section {
+  display: flex;
+  justify-content: center;
+}
+
+.verification-container {
+  width: 100%;
+  max-width: 600px;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f0f8ff;
+}
+
 form div {
   display: flex;
   flex-direction: column;

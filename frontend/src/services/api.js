@@ -36,6 +36,35 @@ export const registerUser = async (userData) => {
 };
 
 /**
+ * Initiates the landlord background check process.
+ * @param {string} userId - The ID of the landlord to verify.
+ * @returns {Promise<object>} The response from the backend.
+ */
+export const startLandlordVerification = async (userId) => {
+  try {
+    const response = await fetch(`${API_BASE_URL}/verification/initiate`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      // In a real app, the userId would likely be sent via an auth token,
+      // but we send it in the body for this simulation.
+      body: JSON.stringify({ userId }),
+    });
+
+    if (!response.ok) {
+      const errorData = await response.json().catch(() => ({ message: response.statusText }));
+      throw new Error(errorData.message || 'An unknown error occurred.');
+    }
+
+    return response.json();
+  } catch (error) {
+    console.error('Verification initiation failed:', error);
+    throw error;
+  }
+};
+
+/**
  * Logs in a user.
  * @param {object} credentials - The user's credentials.
  * @param {string} credentials.email - The user's email.

@@ -17,5 +17,19 @@
     "passwordLabel": "Contraseña:",
     "submitButton": "Iniciar Sesión",
     "submittingButton": "Iniciando sesión..."
+  },
+  "verification": {
+    "title": "Conviértase en un Propietario Verificado",
+    "description": "Para garantizar la seguridad y la confianza de nuestra comunidad, requerimos que los propietarios completen una verificación de antecedentes. Esto le ayuda a destacar ante los inquilinos.",
+    "check": {
+      "identity": "Verificación de Identidad",
+      "criminal": "Verificación de Antecedentes Penales",
+      "watchlist": "Verificación en Listas de Vigilancia Globales"
+    },
+    "consent": "Al hacer clic a continuación, usted acepta una verificación de antecedentes realizada por nuestro socio externo.",
+    "button": {
+      "start": "Iniciar Verificación",
+      "loading": "Iniciando..."
+    }
   }
 }

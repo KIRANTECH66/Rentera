@@ -8,6 +8,10 @@ class User {
     this.password = password; // In a real app, this would be hashed
     this.role = role; // 'landlord' or 'renter'
     this.createdAt = new Date();
+
+    // Fields for landlord verification
+    this.isIdentityVerified = false;
+    this.backgroundCheckStatus = 'not_started'; // e.g., not_started, pending, clear, review_required
   }
 }
 
