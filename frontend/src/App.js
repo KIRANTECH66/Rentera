@@ -5,13 +5,14 @@ import LandlordDashboard from './components/LandlordDashboard';
 import RenterDashboard from './components/RenterDashboard';
 import WelcomePage from './components/WelcomePage';
 import * as authService from './services/authService';
+import useTranslation from './hooks/useTranslation';
 import './App.css';
 
 function App() {
+  const { t } = useTranslation();
   const [currentUser, setCurrentUser] = useState(null);
 
   useEffect(() => {
-    // Check for a user session when the app loads
     const user = authService.getCurrentUser();
     if (user) {
       setCurrentUser(user);
@@ -28,8 +29,16 @@ function App() {
     setCurrentUser(null);
   };
 
+  const WelcomeHero = () => (
+    <div className="welcome-hero">
+      <h2>{t('welcome.hero.title')}</h2>
+      <p>{t('welcome.hero.subtitle')}</p>
+    </div>
+  );
+
   const LoggedOutView = () => (
     <>
+      <WelcomeHero />
       <div className="auth-container">
         <div className="auth-form">
           <Register />
