@@ -1,0 +1,45 @@
+This file lists the dependencies and instructions needed to run this project locally.
+
+---
+### Backend Dependencies
+---
+
+To install the backend dependencies, navigate to the `backend` directory in your terminal and run the following command:
+
+```
+npm install
+```
+
+This will install the following packages listed in `backend/package.json`:
+- express: ^4.19.2
+
+---
+### Frontend Dependencies
+---
+
+To install the frontend dependencies, navigate to the `frontend` directory in your terminal and run the following command:
+
+```
+npm install
+```
+
+This will install the following packages listed in `frontend/package.json`:
+- react: ^18.3.1
+- react-dom: ^18.3.1
+
+Note: The `frontend` also requires `react-scripts` for the start/build scripts to work. If `create-react-app` was not used, you may need to install it manually:
+```
+npm install react-scripts
+```
+
+---
+### Running the Application
+---
+
+1.  **Start the Backend Server:**
+    - In the `backend` directory, run: `npm start`
+    - The server should start on http://localhost:3001
+
+2.  **Start the Frontend Application:**
+    - In the `frontend` directory, run: `npm start`
+    - The application should open in your browser at http://localhost:3000
