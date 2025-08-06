@@ -50,5 +50,15 @@
       "noFile": "Please select a file to upload."
     },
     "success": "Successfully uploaded {{fileName}}."
+  },
+  "pricing": {
+    "title": "Rental Options",
+    "notAvailable": "Pricing not available.",
+    "duration": {
+      "daily": "day",
+      "weekly": "week",
+      "monthly": "month",
+      "yearly": "year"
+    }
   }
 }

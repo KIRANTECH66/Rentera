@@ -3,11 +3,20 @@ import Register from './components/Register';
 import Login from './components/Login';
 import LandlordVerification from './components/LandlordVerification';
 import DocumentUploader from './components/DocumentUploader';
+import PropertyPricing from './components/PropertyPricing';
 import './App.css'; // Let's add a little bit of styling
 
 function App() {
-  // Mock property ID for the simulation
-  const mockPropertyId = 'prop_1668633600000';
+  // Mock property object for the simulation
+  const mockProperty = {
+    id: 'prop_12345',
+    name: 'Sunny Downtown Apartment',
+    pricing: [
+      { duration: 'monthly', price: 220000, currency: 'USD' },
+      { duration: 'yearly', price: 2400000, currency: 'USD' },
+      { duration: 'weekly', price: 70000, currency: 'USD' },
+    ],
+  };
 
   return (
     <div className="App">
@@ -29,7 +38,11 @@ function App() {
         </div>
         <hr className="divider" />
         <div className="feature-section">
-          <DocumentUploader propertyId={mockPropertyId} />
+          <div className="property-card">
+            <h3>{mockProperty.name}</h3>
+            <PropertyPricing pricing={mockProperty.pricing} />
+            <DocumentUploader propertyId={mockProperty.id} />
+          </div>
         </div>
       </main>
     </div>

@@ -50,5 +50,15 @@
       "noFile": "Por favor, seleccione un archivo para subir."
     },
     "success": "Se ha subido {{fileName}} con éxito."
+  },
+  "pricing": {
+    "title": "Opciones de Alquiler",
+    "notAvailable": "Precios no disponibles.",
+    "duration": {
+      "daily": "día",
+      "weekly": "semana",
+      "monthly": "mes",
+      "yearly": "año"
+    }
   }
 }

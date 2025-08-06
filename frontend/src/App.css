@@ -47,13 +47,45 @@ form {
   justify-content: center;
 }
 
-.verification-container, .uploader-container {
+.verification-container, .uploader-container, .pricing-container {
   width: 100%;
   max-width: 600px;
   padding: 1rem;
   border: 1px solid #ddd;
   border-radius: 8px;
   background-color: #f9f9f9;
+  text-align: left;
+}
+
+.property-card {
+  width: 100%;
+  max-width: 600px;
+  padding: 1.5rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.property-card h3 {
+  text-align: center;
+  margin-top: 0;
+}
+
+.pricing-list {
+  list-style: none;
+  padding: 0;
+}
+
+.pricing-option {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.pricing-option .price {
+  font-weight: bold;
 }
 
 form div {

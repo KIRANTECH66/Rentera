@@ -3,8 +3,11 @@ const Property = require('../models/property.model');
 
 // In-memory array to store properties, acting as a temporary database.
 const properties = [
-  // Pre-populate with a dummy property for the simulation
-  new Property('Sample Villa', '123 Main St, Anytown', 250000, 'USD', '123')
+  // Pre-populate with a dummy property for the simulation using the new pricing structure
+  new Property('Sample Villa', '123 Main St, Anytown', '123', [
+    { duration: 'monthly', price: 250000, currency: 'USD' },
+    { duration: 'yearly', price: 2800000, currency: 'USD' },
+  ])
 ];
 
 const uploadDocument = (req, res) => {
@@ -30,6 +33,16 @@ const uploadDocument = (req, res) => {
     // In a real app, you'd store the file path or URL from a service like S3 here.
     // fileUrl: 'https://s3.amazonaws.com/bucket/path/to/file.pdf'
   };
+
+  // --- Future Enhancement: Dynamic Lease Generation ---
+  // If docType === 'lease', the request would also include the selected pricing tier.
+  // const { selectedPricing } = req.body;
+  // 1. Find the chosen pricing option from property.pricing.
+  // 2. Load a lease template (e.g., from a 'templates' folder).
+  // 3. Auto-fill the template with property details, tenant info, and the dynamic
+  //    price, duration, and dates from the selected pricing option.
+  // 4. Initiate the e-signature flow with the generated document.
+  // ----------------------------------------------------
 
   property.documents.push(newDocument);
   console.log(`[Documents] Document '${fileName}' added to property ${propertyId}.`);
