@@ -10,5 +10,12 @@
     "submittingButton": "Registrando...",
     "successMessage": "¡Registro exitoso! Bienvenido, {{email}}",
     "errorDefault": "Ocurrió un error desconocido."
+  },
+  "login": {
+    "title": "Iniciar Sesión",
+    "emailLabel": "Correo Electrónico:",
+    "passwordLabel": "Contraseña:",
+    "submitButton": "Iniciar Sesión",
+    "submittingButton": "Iniciando sesión..."
   }
 }

@@ -6,7 +6,8 @@ const userController = require('../controllers/user.controller');
 // POST /api/users/register
 router.post('/register', userController.register);
 
-// In the future, other user-related routes would be added here
-// e.g., router.post('/login', userController.login);
+// Define the login route
+// POST /api/users/login
+router.post('/login', userController.login);
 
 module.exports = router;

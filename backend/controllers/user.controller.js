@@ -36,6 +36,39 @@ const register = (req, res) => {
   });
 };
 
+const login = (req, res) => {
+  const { email, password } = req.body;
+
+  // 1. Basic Validation
+  if (!email || !password) {
+    return res.status(400).json({ message: 'Email and password are required.' });
+  }
+
+  // 2. Find user (simulated)
+  const user = users.find(u => u.email === email);
+  if (!user) {
+    return res.status(401).json({ message: 'Invalid credentials.' });
+  }
+
+  // 3. Compare password (simulated)
+  // In a real app: const isMatch = await bcrypt.compare(password, user.password);
+  const isMatch = user.password === `hashed_${password}`;
+
+  if (!isMatch) {
+    return res.status(401).json({ message: 'Invalid credentials.' });
+  }
+
+  // 4. Respond with success (don't send the password)
+  // In a real app, you'd typically generate and send a JWT here.
+  res.status(200).json({
+    id: user.id,
+    email: user.email,
+    role: user.role,
+    message: 'Login successful',
+  });
+};
+
 module.exports = {
   register,
+  login,
 };

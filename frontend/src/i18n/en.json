@@ -10,5 +10,12 @@
     "submittingButton": "Registering...",
     "successMessage": "Registration successful! Welcome, {{email}}",
     "errorDefault": "An unknown error occurred."
+  },
+  "login": {
+    "title": "Login",
+    "emailLabel": "Email:",
+    "passwordLabel": "Password:",
+    "submitButton": "Login",
+    "submittingButton": "Logging in..."
   }
 }

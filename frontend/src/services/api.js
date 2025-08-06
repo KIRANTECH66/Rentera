@@ -13,7 +13,7 @@ const API_BASE_URL = 'http://localhost:3001/api';
  */
 export const registerUser = async (userData) => {
   try {
-    const response = await fetch(`${API_BASE_URL}/users/register`, {
+    const response = await fetch(`${API_.../users/register`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -35,4 +35,31 @@ export const registerUser = async (userData) => {
   }
 };
 
-// Future functions like loginUser, getProperties, etc., would go here.
+/**
+ * Logs in a user.
+ * @param {object} credentials - The user's credentials.
+ * @param {string} credentials.email - The user's email.
+ * @param {string} credentials.password - The user's password.
+ * @returns {Promise<object>} The logged-in user object.
+ */
+export const loginUser = async (credentials) => {
+  try {
+    const response = await fetch(`${API_BASE_URL}/users/login`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(credentials),
+    });
+
+    if (!response.ok) {
+      const errorData = await response.json().catch(() => ({ message: response.statusText }));
+      throw new Error(errorData.message || 'An unknown error occurred.');
+    }
+
+    return response.json();
+  } catch (error) {
+    console.error('Login failed:', error);
+    throw error;
+  }
+};
