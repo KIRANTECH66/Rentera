@@ -7,6 +7,23 @@
   padding: 20px;
   color: white;
   margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.auth-controls {
+  display: flex;
+  gap: 1rem;
+}
+
+.auth-controls button {
+  background-color: #61dafb;
+  border: none;
+  color: #282c34;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 main {

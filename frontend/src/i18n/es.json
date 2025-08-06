@@ -66,5 +66,8 @@
     "loading": "Cargando su panel...",
     "error": "No se pudieron cargar los datos del panel",
     "welcome": "Bienvenido, {{email}}"
+  },
+  "renterDashboard": {
+    "title": "Panel de Inquilino"
   }
 }

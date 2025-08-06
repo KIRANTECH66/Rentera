@@ -66,5 +66,8 @@
     "loading": "Loading your dashboard...",
     "error": "Failed to load dashboard data",
     "welcome": "Welcome, {{email}}"
+  },
+  "renterDashboard": {
+    "title": "Renter Dashboard"
   }
 }
