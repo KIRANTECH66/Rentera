@@ -24,7 +24,6 @@ const WelcomePage = () => {
           </ul>
         </div>
       </div>
-    </div>
   );
 };
 
