@@ -1,0 +1,70 @@
+{
+  "register": {
+    "title": "Register",
+    "emailLabel": "Email:",
+    "passwordLabel": "Password:",
+    "roleLabel": "I am a:",
+    "renterOption": "Renter",
+    "landlordOption": "Landlord",
+    "submitButton": "Register",
+    "submittingButton": "Registering...",
+    "successMessage": "Registration successful! Welcome, {{email}}",
+    "errorDefault": "An unknown error occurred."
+  },
+  "login": {
+    "title": "Login",
+    "emailLabel": "Email:",
+    "passwordLabel": "Password:",
+    "submitButton": "Login",
+    "submittingButton": "Logging in..."
+  },
+  "verification": {
+    "title": "Become a Verified Landlord",
+    "description": "To ensure the safety and trust of our community, we require landlords to complete a background check. This helps you stand out to renters.",
+    "check": {
+      "identity": "Identity Verification",
+      "criminal": "Criminal Record Check",
+      "watchlist": "Global Watchlist Check"
+    },
+    "consent": "By clicking below, you consent to a background check performed by our third-party partner.",
+    "button": {
+      "start": "Start Verification",
+      "loading": "Initiating..."
+    }
+  },
+  "uploader": {
+    "title": "Upload Document",
+    "docTypeLabel": "Document Type:",
+    "docType": {
+      "lease": "Lease Agreement",
+      "addendum": "Addendum",
+      "other": "Other"
+    },
+    "fileLabel": "Choose a file:",
+    "selectedFile": "Selected file",
+    "button": {
+      "upload": "Upload",
+      "loading": "Uploading..."
+    },
+    "error": {
+      "noFile": "Please select a file to upload."
+    },
+    "success": "Successfully uploaded {{fileName}}."
+  },
+  "pricing": {
+    "title": "Rental Options",
+    "notAvailable": "Pricing not available.",
+    "duration": {
+      "daily": "day",
+      "weekly": "week",
+      "monthly": "month",
+      "yearly": "year"
+    }
+  },
+  "dashboard": {
+    "title": "Landlord Dashboard",
+    "loading": "Loading your dashboard...",
+    "error": "Failed to load dashboard data",
+    "welcome": "Welcome, {{email}}"
+  }
+}
