@@ -1,0 +1,14 @@
+{
+  "register": {
+    "title": "Register",
+    "emailLabel": "Email:",
+    "passwordLabel": "Password:",
+    "roleLabel": "I am a:",
+    "renterOption": "Renter",
+    "landlordOption": "Landlord",
+    "submitButton": "Register",
+    "submittingButton": "Registering...",
+    "successMessage": "Registration successful! Welcome, {{email}}",
+    "errorDefault": "An unknown error occurred."
+  }
+}

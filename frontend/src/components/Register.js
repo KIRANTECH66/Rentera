@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { registerUser } from '../services/api';
+import useTranslation from '../hooks/useTranslation';
 
 const Register = () => {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     email: '',
     password: '',
@@ -26,11 +28,11 @@ const Register = () => {
 
     try {
       const result = await registerUser(formData);
-      setSuccess(`Registration successful! Welcome, ${result.email}`);
+      setSuccess(t('register.successMessage', { email: result.email }));
       // Clear form on success
       setFormData({ email: '', password: '', role: 'renter' });
     } catch (err) {
-      setError(err.message);
+      setError(err.message || t('register.errorDefault'));
     } finally {
       setIsLoading(false);
     }
@@ -38,10 +40,10 @@ const Register = () => {
 
   return (
     <div>
-      <h2>Register</h2>
+      <h2>{t('register.title')}</h2>
       <form onSubmit={handleSubmit}>
         <div>
-          <label htmlFor="email">Email:</label>
+          <label htmlFor="email">{t('register.emailLabel')}</label>
           <input
             type="email"
             id="email"
@@ -52,7 +54,7 @@ const Register = () => {
           />
         </div>
         <div>
-          <label htmlFor="password">Password:</label>
+          <label htmlFor="password">{t('register.passwordLabel')}</label>
           <input
             type="password"
             id="password"
@@ -63,19 +65,19 @@ const Register = () => {
           />
         </div>
         <div>
-          <label htmlFor="role">I am a:</label>
+          <label htmlFor="role">{t('register.roleLabel')}</label>
           <select
             id="role"
             name="role"
             value={formData.role}
             onChange={handleChange}
           >
-            <option value="renter">Renter</option>
-            <option value="landlord">Landlord</option>
+            <option value="renter">{t('register.renterOption')}</option>
+            <option value="landlord">{t('register.landlordOption')}</option>
           </select>
         </div>
         <button type="submit" disabled={isLoading}>
-          {isLoading ? 'Registering...' : 'Register'}
+          {isLoading ? t('register.submittingButton') : t('register.submitButton')}
         </button>
       </form>
       {error && <p style={{ color: 'red' }}>{error}</p>}

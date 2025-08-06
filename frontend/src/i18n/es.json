@@ -1,0 +1,14 @@
+{
+  "register": {
+    "title": "Registrarse",
+    "emailLabel": "Correo Electrónico:",
+    "passwordLabel": "Contraseña:",
+    "roleLabel": "Yo soy un:",
+    "renterOption": "Inquilino",
+    "landlordOption": "Propietario",
+    "submitButton": "Registrarse",
+    "submittingButton": "Registrando...",
+    "successMessage": "¡Registro exitoso! Bienvenido, {{email}}",
+    "errorDefault": "Ocurrió un error desconocido."
+  }
+}
