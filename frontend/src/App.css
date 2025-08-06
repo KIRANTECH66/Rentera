@@ -42,18 +42,18 @@ form {
   border: 1px solid #eee;
 }
 
-.verification-section {
+.feature-section {
   display: flex;
   justify-content: center;
 }
 
-.verification-container {
+.verification-container, .uploader-container {
   width: 100%;
   max-width: 600px;
   padding: 1rem;
   border: 1px solid #ddd;
   border-radius: 8px;
-  background-color: #f0f8ff;
+  background-color: #f9f9f9;
 }
 
 form div {

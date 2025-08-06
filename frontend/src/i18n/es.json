@@ -31,5 +31,24 @@
       "start": "Iniciar Verificación",
       "loading": "Iniciando..."
     }
+  },
+  "uploader": {
+    "title": "Subir Documento",
+    "docTypeLabel": "Tipo de Documento:",
+    "docType": {
+      "lease": "Contrato de Arrendamiento",
+      "addendum": "Anexo",
+      "other": "Otro"
+    },
+    "fileLabel": "Elija un archivo:",
+    "selectedFile": "Archivo seleccionado",
+    "button": {
+      "upload": "Subir",
+      "loading": "Subiendo..."
+    },
+    "error": {
+      "noFile": "Por favor, seleccione un archivo para subir."
+    },
+    "success": "Se ha subido {{fileName}} con éxito."
   }
 }

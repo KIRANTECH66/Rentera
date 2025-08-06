@@ -24,6 +24,7 @@ class Property {
     this.rentCurrency = rentCurrency.toUpperCase();
     this.ownerId = ownerId;
     this.createdAt = new Date();
+    this.documents = []; // Array to store document records
   }
 }
 

@@ -31,5 +31,24 @@
       "start": "Start Verification",
       "loading": "Initiating..."
     }
+  },
+  "uploader": {
+    "title": "Upload Document",
+    "docTypeLabel": "Document Type:",
+    "docType": {
+      "lease": "Lease Agreement",
+      "addendum": "Addendum",
+      "other": "Other"
+    },
+    "fileLabel": "Choose a file:",
+    "selectedFile": "Selected file",
+    "button": {
+      "upload": "Upload",
+      "loading": "Uploading..."
+    },
+    "error": {
+      "noFile": "Please select a file to upload."
+    },
+    "success": "Successfully uploaded {{fileName}}."
   }
 }

@@ -36,6 +36,38 @@ export const registerUser = async (userData) => {
 };
 
 /**
+ * Uploads a document record to a property.
+ * @param {object} docData - The document metadata.
+ * @param {string} docData.propertyId - The ID of the property.
+ * @param {string} docData.fileName - The name of the file.
+ * @param {string} docData.docType - The type of the document.
+ * @returns {Promise<object>} The response from the backend.
+ */
+export const uploadDocument = async (docData) => {
+  try {
+    // In a real app, this would be a multipart/form-data request
+    // containing the actual file. Here we just send the metadata.
+    const response = await fetch(`${API_BASE_URL}/documents/upload`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(docData),
+    });
+
+    if (!response.ok) {
+      const errorData = await response.json().catch(() => ({ message: response.statusText }));
+      throw new Error(errorData.message || 'An unknown error occurred.');
+    }
+
+    return response.json();
+  } catch (error) {
+    console.error('Document upload failed:', error);
+    throw error;
+  }
+};
+
+/**
  * Initiates the landlord background check process.
  * @param {string} userId - The ID of the landlord to verify.
  * @returns {Promise<object>} The response from the backend.
