@@ -84,6 +84,32 @@ form {
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
+.welcome-hero {
+  padding: 2rem;
+  background-color: #f0f8ff;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 900px;
+}
+
+.feature-card {
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.feature-card ul {
+  padding-left: 20px;
+}
+
 .dashboard-container {
   width: 100%;
   max-width: 1200px;

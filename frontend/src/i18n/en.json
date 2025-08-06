@@ -69,5 +69,23 @@
   },
   "renterDashboard": {
     "title": "Renter Dashboard"
+  },
+  "welcome": {
+    "hero": {
+      "title": "The Future of Renting is Here",
+      "subtitle": "A seamless, secure, and transparent platform for renters and landlords."
+    },
+    "renters": {
+      "title": "For Renters",
+      "feature1": "Search verified properties with confidence.",
+      "feature2": "Apply, sign leases, and pay rent in one place.",
+      "feature3": "Build your rental history and trust score."
+    },
+    "landlords": {
+      "title": "For Landlords",
+      "feature1": "Find qualified tenants with background checks.",
+      "feature2": "Automate rent collection and manage documents.",
+      "feature3": "Minimize vacancies with powerful listing tools."
+    }
   }
 }

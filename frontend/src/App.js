@@ -3,6 +3,7 @@ import Register from './components/Register';
 import Login from './components/Login';
 import LandlordDashboard from './components/LandlordDashboard';
 import RenterDashboard from './components/RenterDashboard';
+import WelcomePage from './components/WelcomePage';
 import * as authService from './services/authService';
 import './App.css';
 
@@ -27,15 +28,19 @@ function App() {
     setCurrentUser(null);
   };
 
-  const AuthForms = () => (
-    <div className="auth-container">
-      <div className="auth-form">
-        <Register />
+  const LoggedOutView = () => (
+    <>
+      <WelcomePage />
+      <hr className="divider" />
+      <div className="auth-container">
+        <div className="auth-form">
+          <Register />
+        </div>
+        <div className="auth-form">
+          <Login onLogin={handleLogin} />
+        </div>
       </div>
-      <div className="auth-form">
-        <Login />
-      </div>
-    </div>
+    </>
   );
 
   const renderDashboard = () => {
@@ -56,21 +61,16 @@ function App() {
       <header className="App-header">
         <h1>Welcome to Rentera</h1>
         <div className="auth-controls">
-          {currentUser ? (
+          {currentUser && (
             <>
-              <span>Logged in as: {currentUser.email}</span>
+              <span>{currentUser.email}</span>
               <button onClick={handleLogout}>Logout</button>
-            </>
-          ) : (
-            <>
-              <button onClick={() => handleLogin('landlord')}>Simulate Login as Landlord</button>
-              <button onClick={() => handleLogin('renter')}>Simulate Login as Renter</button>
             </>
           )}
         </div>
       </header>
       <main>
-        {currentUser ? renderDashboard() : <AuthForms />}
+        {currentUser ? renderDashboard() : <LoggedOutView />}
       </main>
     </div>
   );

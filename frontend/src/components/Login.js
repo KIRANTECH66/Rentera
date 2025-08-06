@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import { loginUser } from '../services/api';
 import useTranslation from '../hooks/useTranslation';
 
-const Login = () => {
+const Login = ({ onLogin }) => {
   const { t } = useTranslation();
   const [formData, setFormData] = useState({
     email: '',
@@ -25,11 +24,15 @@ const Login = () => {
     setSuccess(null);
     setIsLoading(true);
 
+    // This is where the simulation happens.
+    // In a real app, you would call the real API service `loginUser`.
+    // Here, we just determine the role from the email for the demo.
     try {
-      const result = await loginUser(formData);
-      setSuccess(result.message);
-      setFormData({ email: '', password: '' });
+      const role = formData.email.includes('landlord') ? 'landlord' : 'renter';
+      onLogin(role);
+      // No need to set success message here, as the view will change.
     } catch (err) {
+      // This catch block would be for a real API call failure.
       setError(err.message);
     } finally {
       setIsLoading(false);

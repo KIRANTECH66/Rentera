@@ -69,5 +69,23 @@
   },
   "renterDashboard": {
     "title": "Panel de Inquilino"
+  },
+  "welcome": {
+    "hero": {
+      "title": "El Futuro del Alquiler está Aquí",
+      "subtitle": "Una plataforma fluida, segura y transparente para inquilinos y propietarios."
+    },
+    "renters": {
+      "title": "Para Inquilinos",
+      "feature1": "Busque propiedades verificadas con confianza.",
+      "feature2": "Aplique, firme contratos y pague el alquiler en un solo lugar.",
+      "feature3": "Construya su historial de alquiler y puntuación de confianza."
+    },
+    "landlords": {
+      "title": "Para Propietarios",
+      "feature1": "Encuentre inquilinos calificados con verificación de antecedentes.",
+      "feature2": "Automatice el cobro del alquiler y gestione documentos.",
+      "feature3": "Minimice las vacantes con potentes herramientas de listado."
+    }
   }
 }
