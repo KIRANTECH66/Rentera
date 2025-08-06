@@ -30,8 +30,6 @@ function App() {
 
   const LoggedOutView = () => (
     <>
-      <WelcomePage />
-      <hr className="divider" />
       <div className="auth-container">
         <div className="auth-form">
           <Register />
@@ -40,6 +38,8 @@ function App() {
           <Login onLogin={handleLogin} />
         </div>
       </div>
+      <hr className="divider" />
+      <WelcomePage />
     </>
   );
 
