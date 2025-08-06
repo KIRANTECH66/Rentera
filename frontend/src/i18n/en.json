@@ -70,6 +70,17 @@
   "renterDashboard": {
     "title": "Renter Dashboard"
   },
+  "team": {
+    "addManager": {
+      "title": "Manage Team",
+      "description": "Add a property manager to your account by entering their email address. They will need to have an existing Rentera account.",
+      "placeholder": "manager@example.com",
+      "button": {
+        "submit": "Add Manager",
+        "loading": "Adding..."
+      }
+    }
+  },
   "welcome": {
     "hero": {
       "title": "The Future of Renting is Here",

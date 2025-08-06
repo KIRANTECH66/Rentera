@@ -3,10 +3,12 @@ import useTranslation from '../hooks/useTranslation';
 import VerificationStatus from './dashboard/VerificationStatus';
 import PropertyList from './dashboard/PropertyList';
 import RecentDocuments from './dashboard/RecentDocuments';
+import AddManagerForm from './dashboard/AddManagerForm';
 
 // Mock data for simulation until API service is updated
 const mockDashboardData = {
   user: {
+    id: 'user_landlord_123',
     email: 'landlord@test.com',
     role: 'landlord',
     isIdentityVerified: false,
@@ -81,6 +83,9 @@ const LandlordDashboard = () => {
         </div>
         <div className="widget">
           <RecentDocuments properties={dashboardData.properties} />
+        </div>
+        <div className="widget">
+          <AddManagerForm landlordId={dashboardData.user.id} />
         </div>
         <div className="widget">
           <h4>Stats</h4>

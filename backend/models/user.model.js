@@ -12,6 +12,10 @@ class User {
     // Fields for landlord verification
     this.isIdentityVerified = false;
     this.backgroundCheckStatus = 'not_started'; // e.g., not_started, pending, clear, review_required
+
+    // Fields for team management
+    this.propertyManagers = []; // For landlords: list of manager user IDs
+    this.managedBy = null; // For managers: the landlord's user ID
   }
 }
 

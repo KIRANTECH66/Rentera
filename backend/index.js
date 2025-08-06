@@ -10,6 +10,7 @@ const userRoutes = require('./routes/user.routes');
 const verificationRoutes = require('./routes/verification.routes');
 const documentRoutes = require('./routes/document.routes');
 const dashboardRoutes = require('./routes/dashboard.routes');
+const teamRoutes = require('./routes/team.routes');
 
 app.get('/api', (req, res) => {
   res.send('Hello from the Rentera Backend!');
@@ -20,6 +21,7 @@ app.use('/api/users', userRoutes);
 app.use('/api/verification', verificationRoutes);
 app.use('/api/documents', documentRoutes);
 app.use('/api/dashboard', dashboardRoutes);
+app.use('/api/team', teamRoutes);
 
 app.listen(port, () => {
   console.log(`Server is listening on port ${port}`);

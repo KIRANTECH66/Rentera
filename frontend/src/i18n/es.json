@@ -70,6 +70,17 @@
   "renterDashboard": {
     "title": "Panel de Inquilino"
   },
+  "team": {
+    "addManager": {
+      "title": "Gestionar Equipo",
+      "description": "Añada un administrador de propiedades a su cuenta introduciendo su dirección de correo electrónico. Necesitarán tener una cuenta existente en Rentera.",
+      "placeholder": "manager@ejemplo.com",
+      "button": {
+        "submit": "Añadir Gestor",
+        "loading": "Añadiendo..."
+      }
+    }
+  },
   "welcome": {
     "hero": {
       "title": "El Futuro del Alquiler está Aquí",
