@@ -25,6 +25,7 @@ const WelcomePage = () => {
             <li>{t('welcome.landlords.feature1')}</li>
             <li>{t('welcome.landlords.feature2')}</li>
             <li>{t('welcome.landlords.feature3')}</li>
+            <li>{t('welcome.landlords.feature4')}</li>
           </ul>
         </div>
       </div>
